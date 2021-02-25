@@ -1,30 +1,22 @@
-# PS5 Stock Alert Telegram Bot
+# Nest-React-Template
 
-https://t.me/poland_ps5_stonk_alert_bot
+This is a Nest + Next JS template.
 
-This bot checks availability of PS5 in Poland online markets and sends Telegram notifications.
+Features:
 
-// Telegram bot can be run only one instance!
+- NestJS
+- NextJS
+- SCSS
+- Tailwind
+- Husky + Commitizen
+- Jest
+- MobX + React Service Provider
+- Isomorphic Rendering
+- Enviromnent Folder (scr/env/(dev,prod,test))
 
 ## Environments
 
-Firstly, you need to create a Telegram bot following to Telegram API rules.
-
-Secondly, you need to create a DROPBOX KEY to store information about user sessions.
-
-Then just provide the collected data to the environment.
-
-You can create a file `.env` with the next lines:
-
-`TELEGRAM_BOT_KEY=...`
-
-`DROPBOX_KEY=...`
-
-Alternatively you can run in bash:
-
-`export TELEGRAM_BOT_KEY=...`
-
-`export DROPBOX_KEY=...`
+To configure the environment you need to configure different environments at src/env
 
 ## Production
 
@@ -36,16 +28,22 @@ Alternatively you can run in bash:
 
 `npm run start:dev`
 
-## Cloud
+## Testing
 
-`NPM_CONFIG_PRODUCTION=false`
+`npm run test`
 
-`ENV=prod`
+## Testing Watch
 
-`TELEGRAM_BOT_KEY=...`
+`npm run test:watch`
 
-`DROPBOX_KEY=...`
+## Testing Coverage
 
-## Build Docker for Raspberry PI
+`npm run test:cov`
 
-`docker buildx build --platform linux/arm/v7 -t makame/ps5-stonk-bot:latest --push .`
+## Git Commit
+
+`npm run commit`
+
+## Release
+
+`npm run semantic-release`
