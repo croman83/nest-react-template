@@ -23,7 +23,7 @@ export async function bootstrapAPI() {
 
   app
     .get(NextModule)
-    .prepare(getNestConfig())
+    .prepare(getNestConfig() as any)
     .then(() => {
       app.listen(port, WEB_SERVER_HOST, () => {
         console.log("Server is listening...", port);
