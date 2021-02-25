@@ -5,6 +5,7 @@ import { NextMiddleware, NextModule } from "@nestpress/next";
 import { NextController } from "./next.controller";
 import { FrontendMiddleware } from "./frontend.middleware";
 import { ScheduleModule } from "@nestjs/schedule";
+import { AppController } from "./app.controller";
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { ScheduleModule } from "@nestjs/schedule";
     }),
     ScheduleModule.forRoot(),
   ],
-  controllers: [NextController],
+  controllers: [NextController, AppController],
   providers: [],
 })
 export class AppModule {
