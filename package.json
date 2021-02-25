@@ -8,10 +8,9 @@
   "scripts": {
     "clean": "rimraf dist demo-nest-api",
     "release": "docker buildx build --platform linux/arm/v7 -t makame/ps5-stonk-bot:latest --push .",
-    "build": "run-p build-tailwind build:ui build:api",
+    "build": "run-p build:ui build:api",
     "build:api": "nest build",
     "build:ui": "next build",
-    "build-tailwind": "tailwindcss build src/components/tailwind.css -o public/tailwind.generated.css",
     "exec": "cross-env ENV=prod NODE_ENV=production node -r dotenv/config -r ./tsconfig-paths-bootstrap.js -r ts-node/register ./src/main.ts",
     "format": "prettier --write \"src/**/*.{tsx,ts,js,jsx}\" \"test/**/*.ts\"",
     "start:dev": "nodemon --watch src -e ts --exec \"npm run start:dev:raw || exit 1\"",
