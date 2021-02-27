@@ -210,6 +210,9 @@
     ]
   },
   "majestic": {
-    "jestScriptPath": "./node_modules/.bin/jest"
+    "jestScriptPath": "./node_modules/.bin/jest",
+    "env": {
+      "ENV": "test"
+    }
   }
 }
