@@ -32,6 +32,10 @@ To configure the environment you need to configure different environments at src
 
 `npm run test`
 
+or with majestic
+
+`npx majestic --noOpen --port 5000`
+
 ## Testing Watch
 
 `npm run test:watch`

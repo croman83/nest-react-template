@@ -208,5 +208,8 @@
       "public/**/*",
       ".next/**/*"
     ]
+  },
+  "majestic": {
+    "jestScriptPath": "./node_modules/.bin/jest"
   }
 }
